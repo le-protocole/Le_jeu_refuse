@@ -148,25 +148,43 @@ def main():
     for i, target in enumerate(default_targets, 1):
         print(f"    {i}. {target}")
     
-    print("\n  Custom targets:")
-    print("    Enter target URLs, one per line")
-    print("    Leave empty and press Enter twice to start\n")
+    print("  OPTIONS:")
+    print("    1. Use all default targets (10)")
+    print("    2. Select specific targets from defaults")
+    print("    3. Enter custom targets\n")
     
-    custom_targets = []
-    print("  Enter targets (or press Enter to use defaults):")
-    while True:
-        target = input("    > ").strip()
-        if not target:
-            if custom_targets:
-                break
-            else:
-                # Use defaults
-                targets = default_targets
-                break
-        custom_targets.append(target)
+    choice = input("  Choose option (1-3): ").strip()
+    targets = []
     
-    if custom_targets:
-        targets = custom_targets
+    if choice == "2":
+        # Display targets with checkboxes
+        print("\n  Select targets from default list:")
+        selections = {}
+        for i, target in enumerate(default_targets, 1):
+            resp = input(f"    [{i:2d}] {target:<25} (y/n): ").strip().lower()
+            selections[target] = resp in ['y', 'yes', '']
+        
+        targets = [t for t, selected in selections.items() if selected]
+        if not targets:
+            print("  No targets selected, using defaults")
+            targets = default_targets
+    
+    elif choice == "3":
+        # Custom targets
+        print("\n  Enter custom targets (one per line, empty line to finish):")
+        while True:
+            target = input("    > ").strip()
+            if not target:
+                break
+            targets.append(target)
+        
+        if not targets:
+            print("  No custom targets entered, using defaults")
+            targets = default_targets
+    
+    else:
+        # Default: use all defaults
+        targets = default_targets
     
     # Initialize modules
     print_section(f"📊 Initializing {len(targets)} targets for REAL scanning")
