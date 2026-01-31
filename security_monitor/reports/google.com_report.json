@@ -1,0 +1,27 @@
+{
+  "target": "google.com",
+  "ip": "142.250.197.110",
+  "scan_date": "2026-02-01T00:13:35.416319",
+  "open_ports": [
+    {
+      "port": 80,
+      "state": "open",
+      "service": "http"
+    },
+    {
+      "port": 443,
+      "state": "open",
+      "service": "https"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "LOW",
+      "title": "No public services detected",
+      "description": "No accessible ports found (positive indicator)"
+    }
+  ],
+  "risk_score": 3,
+  "risk_level": "LOW",
+  "recommendations": []
+}

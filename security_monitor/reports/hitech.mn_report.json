@@ -1,0 +1,29 @@
+{
+  "scan_date": "2026-02-01T00:32:21.599071",
+  "target": "hitech.mn",
+  "ip_address": "3.175.207.37",
+  "behind_cdn": false,
+  "cdn_provider": null,
+  "open_ports": [
+    {
+      "port": 80,
+      "state": "open",
+      "service": "http"
+    },
+    {
+      "port": 443,
+      "state": "open",
+      "service": "https"
+    }
+  ],
+  "findings_count": 1,
+  "risk_score": 3,
+  "risk_level": "LOW",
+  "findings": [
+    {
+      "severity": "LOW",
+      "title": "No public services detected",
+      "description": "No accessible ports found (positive indicator)"
+    }
+  ]
+}

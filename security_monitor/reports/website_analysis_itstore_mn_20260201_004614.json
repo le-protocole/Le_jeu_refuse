@@ -1,0 +1,47 @@
+{
+  "scan_timestamp": "2026-02-01T00:46:10.414012",
+  "domain": "itstore.mn",
+  "public_ip": "76.76.21.21",
+  "reverse_dns": null,
+  "is_cdn": false,
+  "cdn_provider": null,
+  "cname_records": [],
+  "all_ips": [
+    "76.76.21.21"
+  ],
+  "open_ports": {
+    "21": "FTP",
+    "80": "HTTP",
+    "443": "HTTPS"
+  },
+  "vulnerabilities": [
+    {
+      "severity": "SeverityLevel.HIGH",
+      "title": "Insecure FTP service detected",
+      "description": "FTP transmits credentials in plaintext. Should use SFTP or SCP.",
+      "affected_asset": "port 21",
+      "evidence": "Port 21 (FTP) is open",
+      "cve_reference": null,
+      "mitigation": [
+        "Disable FTP service",
+        "Use SFTP instead (port 22)",
+        "Restrict access by IP if FTP is required"
+      ]
+    },
+    {
+      "severity": "SeverityLevel.MEDIUM",
+      "title": "Unencrypted HTTP service",
+      "description": "HTTP without HTTPS means traffic is not encrypted.",
+      "affected_asset": "port 80",
+      "evidence": "Port 80 (HTTP) is open",
+      "cve_reference": null,
+      "mitigation": [
+        "Enable HTTPS (Port 443)",
+        "Redirect all HTTP to HTTPS",
+        "Install valid SSL/TLS certificate",
+        "Enable HSTS (HTTP Strict-Transport-Security)"
+      ]
+    }
+  ],
+  "data_source": "REAL-TIME SCAN (NOT CACHED)"
+}

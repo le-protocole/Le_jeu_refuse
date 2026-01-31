@@ -1,0 +1,113 @@
+{
+  "scan_timestamp": "2026-02-01T01:08:14.684747",
+  "domain": "mail.proton.me",
+  "data_source": "ADVANCED SCAN (REAL-TIME, NOT CACHED)",
+  "modules": {
+    "dns": {
+      "target": "mail.proton.me",
+      "ips": [
+        "185.70.42.37"
+      ],
+      "cdn": false,
+      "cdn_provider": null,
+      "a_records": [
+        "185.70.42.37"
+      ],
+      "cname_records": [],
+      "mx_records": [
+        "20 mailsec.protonmail.ch.",
+        "10 mail.protonmail.ch."
+      ],
+      "ns_records": [],
+      "timestamp": "2026-02-01T01:08:14.685126",
+      "errors": []
+    },
+    "ssl": {
+      "domain": "mail.proton.me",
+      "ssl_enabled": false,
+      "error": "Failed to connect"
+    },
+    "headers": {
+      "domain": "mail.proton.me",
+      "status_code": 200,
+      "headers_found": {
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Security-Policy": "default-src 'self'; media-src 'self' blob:; connect-src 'self' blob: https://proton.me https://*.proton.me; script-src 'self' 'wasm-unsafe-eval' blob: 'sha256-eAhF1Kdccp0BTXM6nMW7SYBdV0c3fZwzcC177TQ692g='; style-src 'self' 'unsafe-inline'; img-src http: https: data: blob: cid:; frame-src 'self' blob: https://mail-api.proton.me https://account.proton.me https://verify.proton.me https://calendar.proton.me https://drive.proton.me https://proton.me; object-src 'self' blob:; child-src 'self' data: blob:; report-uri https://reports.proton.me/reports/csp; frame-ancestors https://calendar.proton.me https://drive.proton.me;",
+        "X-XSS-Protection": "0",
+        "Referrer-Policy": "strict-origin-when-cross-origin"
+      },
+      "headers_missing": [
+        {
+          "header": "X-Frame-Options",
+          "severity": "MEDIUM",
+          "description": "Prevents clickjacking attacks",
+          "recommendation": "Add: X-Frame-Options: DENY"
+        }
+      ],
+      "weak_values": [
+        {
+          "header": "Content-Security-Policy",
+          "issue": "Contains unsafe directives",
+          "value": "default-src 'self'; media-src 'self' blob:; connect-src 'self' blob: https://proton.me https://*.proton.me; script-src 'self' 'wasm-unsafe-eval' blob: 'sha256-eAhF1Kdccp0BTXM6nMW7SYBdV0c3fZwzcC177TQ692g='; style-src 'self' 'unsafe-inline'; img-src http: https: data: blob: cid:; frame-src 'self' blob: https://mail-api.proton.me https://account.proton.me https://verify.proton.me https://calendar.proton.me https://drive.proton.me https://proton.me; object-src 'self' blob:; child-src 'self' data: blob:; report-uri https://reports.proton.me/reports/csp; frame-ancestors https://calendar.proton.me https://drive.proton.me;",
+          "recommendation": "Remove unsafe-inline and unsafe-eval"
+        }
+      ],
+      "security_score": 73
+    },
+    "ports": {},
+    "cloud": {
+      "domain": "mail.proton.me",
+      "providers": [
+        "AWS"
+      ],
+      "details": {
+        "AWS": {
+          "evidence": "IP: 3.121.224.73"
+        }
+      }
+    },
+    "tech_stack": {
+      "domain": "mail.proton.me",
+      "server": "Unknown",
+      "cms": null,
+      "frameworks": [],
+      "languages": [],
+      "technologies": [],
+      "meta_info": {
+        "title": "Proton Mail"
+      }
+    },
+    "vulnerabilities": [
+      {
+        "severity": "SeverityLevel.LOW",
+        "title": "No public services detected",
+        "description": "No accessible ports found (positive indicator)"
+      }
+    ],
+    "geoip": {
+      "ip": "185.70.42.37",
+      "country": "CH",
+      "region": "Geneva",
+      "city": "Plan-les-Ouates",
+      "latitude": 46.1642,
+      "longitude": 6.118,
+      "isp": "Proton AG",
+      "org": "Proton AG",
+      "timezone": "Europe/Zurich"
+    },
+    "asn": {
+      "ip": "185.70.42.37",
+      "hostname": "185-70-42-37.protonmail.ch",
+      "reverse_dns": "185-70-42-37.protonmail.ch"
+    }
+  },
+  "risk_assessment": {
+    "score": 25,
+    "level": "LOW",
+    "factors": [
+      "No SSL certificate",
+      "1 vulnerabilities found"
+    ]
+  }
+}

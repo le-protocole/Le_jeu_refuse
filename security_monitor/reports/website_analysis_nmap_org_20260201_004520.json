@@ -1,0 +1,21 @@
+{
+  "scan_timestamp": "2026-02-01T00:45:20.138963",
+  "domain": "nmap.org",
+  "public_ip": "50.116.1.184",
+  "reverse_dns": "ack.nmap.org",
+  "is_cdn": false,
+  "cdn_provider": null,
+  "cname_records": [],
+  "all_ips": [
+    "50.116.1.184",
+    "2600:3c01:e000:3e6::6d4e:7061"
+  ],
+  "open_ports": {
+    "21": "FTP",
+    "22": "SSH",
+    "25": "SMTP",
+    "80": "HTTP",
+    "443": "HTTPS"
+  },
+  "vulnerabilities": [
+    

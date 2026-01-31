@@ -1,0 +1,58 @@
+{
+  "scan_timestamp": "2026-02-01T00:53:54.306100",
+  "domain": "hitech.mn",
+  "public_ip": "3.175.207.5",
+  "reverse_dns": "server-3-175-207-5.hkg62.r.cloudfront.net",
+  "is_cdn": false,
+  "cdn_provider": null,
+  "cname_records": [],
+  "all_ips": [
+    "3.175.207.5",
+    "3.175.207.37",
+    "3.175.207.8",
+    "3.175.207.92",
+    "2600:9000:2939:7600:9:6e29:af80:93a1",
+    "2600:9000:2939:ac00:9:6e29:af80:93a1",
+    "2600:9000:2939:1e00:9:6e29:af80:93a1",
+    "2600:9000:2939:d400:9:6e29:af80:93a1",
+    "2600:9000:2939:1000:9:6e29:af80:93a1",
+    "2600:9000:2939:f800:9:6e29:af80:93a1",
+    "2600:9000:2939:ce00:9:6e29:af80:93a1",
+    "2600:9000:2939:2600:9:6e29:af80:93a1"
+  ],
+  "open_ports": {
+    "21": "FTP",
+    "80": "HTTP",
+    "443": "HTTPS"
+  },
+  "vulnerabilities": [
+    {
+      "severity": "SeverityLevel.HIGH",
+      "title": "Insecure FTP service detected",
+      "description": "FTP transmits credentials in plaintext. Should use SFTP or SCP.",
+      "affected_asset": "port 21",
+      "evidence": "Port 21 (FTP) is open",
+      "cve_reference": null,
+      "mitigation": [
+        "Disable FTP service",
+        "Use SFTP instead (port 22)",
+        "Restrict access by IP if FTP is required"
+      ]
+    },
+    {
+      "severity": "SeverityLevel.MEDIUM",
+      "title": "Unencrypted HTTP service",
+      "description": "HTTP without HTTPS means traffic is not encrypted.",
+      "affected_asset": "port 80",
+      "evidence": "Port 80 (HTTP) is open",
+      "cve_reference": null,
+      "mitigation": [
+        "Enable HTTPS (Port 443)",
+        "Redirect all HTTP to HTTPS",
+        "Install valid SSL/TLS certificate",
+        "Enable HSTS (HTTP Strict-Transport-Security)"
+      ]
+    }
+  ],
+  "data_source": "REAL-TIME SCAN (NOT CACHED)"
+}
