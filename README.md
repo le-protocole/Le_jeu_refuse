@@ -1,4 +1,7 @@
 ## 项目简介
+
+![Security System Banner](https://i.pinimg.com/736x/bd/5f/01/bd5f018a3d4225ef451ec0e7d825e55b.jpg)
+
 本系统用于在**不入侵、不利用漏洞、不访问数据**的前提下，
 评估网络与网站的安全态势（Security Posture）。
 仅适用于测试、教学和演示，并且只能在获得授权的环境中使用。
