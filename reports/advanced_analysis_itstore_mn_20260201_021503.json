@@ -1,0 +1,126 @@
+{
+  "scan_timestamp": "2026-02-01T02:14:46.795445",
+  "domain": "itstore.mn",
+  "data_source": "ADVANCED SCAN (REAL-TIME, NOT CACHED)",
+  "modules": {
+    "dns": {
+      "target": "itstore.mn",
+      "ips": [
+        "76.76.21.21"
+      ],
+      "cdn": false,
+      "cdn_provider": null,
+      "a_records": [
+        "76.76.21.21"
+      ],
+      "cname_records": [],
+      "mx_records": [
+        "10 inbound-smtp.eu-west-1.amazonaws.com."
+      ],
+      "ns_records": [
+        "ns-598.awsdns-10.net",
+        "ns-76.awsdns-09.com",
+        "ns-1630.awsdns-11.co.uk",
+        "ns-1511.awsdns-60.org"
+      ],
+      "timestamp": "2026-02-01T02:14:46.795445",
+      "errors": []
+    },
+    "ssl": {
+      "domain": "itstore.mn",
+      "ssl_enabled": false,
+      "error": "Failed to connect"
+    },
+    "headers": {
+      "domain": "itstore.mn",
+      "status_code": 200,
+      "headers_found": {
+        "Strict-Transport-Security": "max-age=63072000"
+      },
+      "headers_missing": [
+        {
+          "header": "X-Content-Type-Options",
+          "severity": "HIGH",
+          "description": "Prevents MIME-type sniffing",
+          "recommendation": "Add: X-Content-Type-Options: nosniff"
+        },
+        {
+          "header": "X-Frame-Options",
+          "severity": "MEDIUM",
+          "description": "Prevents clickjacking attacks",
+          "recommendation": "Add: X-Frame-Options: DENY"
+        },
+        {
+          "header": "Content-Security-Policy",
+          "severity": "HIGH",
+          "description": "Controls resource loading",
+          "recommendation": "Add: Content-Security-Policy: default-src 'self'"
+        },
+        {
+          "header": "X-XSS-Protection",
+          "severity": "MEDIUM",
+          "description": "Protects against XSS attacks",
+          "recommendation": "Add: X-XSS-Protection: 1; mode=block"
+        },
+        {
+          "header": "Referrer-Policy",
+          "severity": "LOW",
+          "description": "Controls referrer information",
+          "recommendation": "Add: Referrer-Policy: strict-origin-when-cross-origin"
+        }
+      ],
+      "weak_values": [],
+      "security_score": 16
+    },
+    "ports": {},
+    "cloud": {
+      "domain": "itstore.mn",
+      "providers": [],
+      "details": {}
+    },
+    "tech_stack": {
+      "domain": "itstore.mn",
+      "server": "vercel",
+      "cms": null,
+      "frameworks": [],
+      "languages": [],
+      "technologies": [
+        "React"
+      ],
+      "meta_info": {
+        "title": "iT хэрэглээгээ цогцоор нь iT STORE -с бүрдүүл"
+      }
+    },
+    "vulnerabilities": [
+      {
+        "severity": "SeverityLevel.LOW",
+        "title": "No public services detected",
+        "description": "No accessible ports found (positive indicator)"
+      }
+    ],
+    "geoip": {
+      "ip": "76.76.21.21",
+      "country": "US",
+      "region": "California",
+      "city": "Walnut",
+      "latitude": 34.0233,
+      "longitude": -117.8512,
+      "isp": "Amazon.com, Inc.",
+      "org": "Amazon.com, Inc.",
+      "timezone": "America/Los_Angeles"
+    },
+    "asn": {
+      "ip": "76.76.21.21",
+      "error": "ASN lookup failed"
+    }
+  },
+  "risk_assessment": {
+    "score": 40,
+    "level": "MEDIUM",
+    "factors": [
+      "No SSL certificate",
+      "Poor security headers",
+      "1 vulnerabilities found"
+    ]
+  }
+}

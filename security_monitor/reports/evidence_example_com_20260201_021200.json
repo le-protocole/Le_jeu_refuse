@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-02-01T02:12:00.991028",
+  "scan": {
+    "domain": "example.com",
+    "risk_score": 25,
+    "open_ports": [
+      {
+        "port": 80,
+        "service": "http"
+      },
+      {
+        "port": 443,
+        "service": "https"
+      }
+    ],
+    "findings": [
+      {
+        "severity": "LOW",
+        "title": "Missing security headers"
+      }
+    ]
+  },
+  "format": "JSON",
+  "purpose": "Raw data for technical review"
+}
