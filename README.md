@@ -14,7 +14,7 @@
 
 ---
 
-## 🛠 核心技术
+##  核心技术
 
 ### 1. 扫描技术
 - **Nmap（主要）**
@@ -106,7 +106,7 @@ Ce système :
 
 ---
 
-## 🛠 Techniques principales
+##  Techniques principales
 
 ### 1. Techniques de scan
 - **Nmap (principal)**
@@ -198,7 +198,7 @@ Ce système :
 
 ---
 
-## 🛠 Үндсэн Техникүүд
+##  Үндсэн Техникүүд
 
 ### 1. Сканнинг Техник
 - **Nmap (Үндсэн)**
